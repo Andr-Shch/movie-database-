@@ -8,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      Start here.
+      
       <Home/>
+      Start here.
       <GlobalStyle/>
     </div>
   );

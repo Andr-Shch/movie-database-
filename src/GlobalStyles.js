@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 :root{
     --maxWidth: 1280px;
-    --white: #fff
+    --white:#fff;
     --lightGrey: #eee;
     --medGrey: #353535;
     --darkGrey: #1c1c1c;
@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 body{
   padding:0;
   margin:0;
+  
 
 h1{
     font-size: 2rem;
