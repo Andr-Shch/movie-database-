@@ -3,7 +3,7 @@ import { Content, Text, Wrapper } from './Heroimg.style';
 
 const HeroImg = ({image, title, text}) => {
    
-   console.log(image)
+  
     return (
         <Wrapper image={image}>
             <Content>

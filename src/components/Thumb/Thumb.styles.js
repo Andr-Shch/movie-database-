@@ -8,7 +8,9 @@ export const Image = styled.img`
  object-fit: cover;
  border-radius: 15px;
  animation: animateThumb 0.8s;
-
+ :hover{
+     opacity: 0.7;
+ }
  @keyframes animateThumb{
      from{
          opacity: 0;
