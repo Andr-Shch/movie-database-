@@ -21,7 +21,6 @@ function App() {
        </Routes>
 
       
-        Start here.
        <GlobalStyle/>
  </Router>
   );

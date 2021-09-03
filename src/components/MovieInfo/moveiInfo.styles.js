@@ -27,7 +27,46 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
  display: flex;
- 
+ max-width: var(--maxWidth);
+ margin: 0 auto;
+ background: rgb(0, 0, 0, 0.7);
+ border-radius: 20px;
+
+ @media screen and (max-width: 768px){
+    display: block;
+    max-height: none;
+ }
+
 `;
 
-export const Text = styled.div``
+export const Text = styled.div`
+     width: 100%;
+     padding: 10px 50px;
+     color:white;
+     overflow: hidden;
+    
+     
+     .rating-directors-cast{
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         color: (--white);
+     }
+     .rating-directors-cast>h3{
+        color: (--white);
+     }
+
+     .score{
+         border-radius: 50%;
+         background-color:white;
+         width: 35px;
+         height: 35px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: black;
+         font-weight: 600;
+         
+     }
+
+`;
