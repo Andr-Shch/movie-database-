@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react"
 import API from '../API'
+import { isPersistedState } from "../helpers";
 
 export const useMoveiFetching = movieId =>{
     const [state, setState] = useState({});
@@ -26,12 +27,27 @@ export const useMoveiFetching = movieId =>{
         } catch (error) {
             setError(true)
         }
+
     }, [movieId])
+
+    const sessionState = isPersistedState(movieId)
 
     useEffect(()=>{
 
+      if(sessionState){
+           setState(sessionState);
+           setLoading(sessionState);
+           setLoading(false)
+           return
+      }    
+     
+
       fetchData()
     }, [movieId])
+
+    useEffect(()=>{
+       sessionStorage.setItem(movieId, JSON.stringify(state))
+    }, [state, movieId] )
 
     return {state, loading, error};
 }
